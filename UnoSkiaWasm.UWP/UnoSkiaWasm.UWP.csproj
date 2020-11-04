@@ -133,6 +133,10 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <ProjectReference Include="..\SvgImage\SvgImage.csproj">
+      <Project>{19511921-9545-4b5a-baa2-27e3224e4a84}</Project>
+      <Name>SvgImage</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />

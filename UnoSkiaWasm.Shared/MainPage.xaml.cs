@@ -23,33 +23,15 @@ namespace UnoSkiaWasm
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        SkiaSharp.Extended.Svg.SKSvg _skSvg;
-
         public MainPage()
         {
             this.InitializeComponent();
 
-            var x = new SkiaSharp.Views.UWP.SKXamlCanvas();
+            var x = new SvgImage.SvgImage(GetType().Assembly, "Resources.black_cat.svg");
             Grid.SetRow(x, 1);
             _grid.Children.Add(x);
-            x.PaintSurface += OnPaintSurface;
-
-            var name = GetType().Assembly.FullName.Split(',')[0];
-            using (var stream = GetType().Assembly.GetManifestResourceStream(name + ".Resources.black_cat.svg"))
-            {
-                _skSvg = new SkiaSharp.Extended.Svg.SKSvg();
-                _skSvg.Load(stream);
-            }
-
         }
 
-        void OnPaintSurface(object sender, SkiaSharp.Views.UWP.SKPaintSurfaceEventArgs e)
-        {
-            var canvas = e.Surface.Canvas;
-            canvas.Clear();
-
-            canvas.DrawPicture(_skSvg.Picture);
-        }
 
         /*
         private void OnPaintSurface(object sender, SkiaSharp.Views.UWP.SKPaintSurfaceEventArgs e)

@@ -94,6 +94,12 @@
   <ItemGroup>
     <AndroidResource Include="Resources\values\Styles.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SvgImage\SvgImage.csproj">
+      <Project>{19511921-9545-4b5a-baa2-27e3224e4a84}</Project>
+      <Name>SvgImage</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="..\UnoSkiaWasm.Shared\UnoSkiaWasm.Shared.projitems" Label="Shared" Condition="Exists('..\UnoSkiaWasm.Shared\UnoSkiaWasm.Shared.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <!-- This will force the generation of the APK when not building inside visual studio -->

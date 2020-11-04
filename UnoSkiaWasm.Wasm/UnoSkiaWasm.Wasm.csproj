@@ -47,5 +47,8 @@
     <PackageReference Include="Uno.Wasm.Bootstrap" Version="1.3.4" />
     <PackageReference Include="Uno.Wasm.Bootstrap.DevServer" Version="1.3.4" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SvgImage\SvgImage.csproj" />
+  </ItemGroup>
   <Import Project="..\UnoSkiaWasm.Shared\UnoSkiaWasm.Shared.projitems" Label="Shared" Condition="Exists('..\UnoSkiaWasm.Shared\UnoSkiaWasm.Shared.projitems')" />
 </Project>
