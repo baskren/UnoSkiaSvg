@@ -115,8 +115,8 @@
     <BundleResource Include="Resources\Fonts\uno-fluentui-assets.ttf" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="SkiaSharp.Views.Uno">
-      <Version>2.80.2</Version>
+    <PackageReference Include="Uno.SkiaSharp.Views">
+      <Version>2.80.0-uno.483</Version>
     </PackageReference>
     <PackageReference Include="Uno.UI" Version="3.1.6" />
     <PackageReference Include="Uno.UI.RemoteControl" Version="3.1.6" Condition="'$(Configuration)'=='Debug'" />
